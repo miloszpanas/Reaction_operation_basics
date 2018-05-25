@@ -9,17 +9,20 @@ var movies = [
     {   
         id: 2,
         title: 'The Void',
-        desc: 'A great horror movie with an awesome 80\' vibe to it'
+        desc: 'A great horror movie with an awesome 80\' vibe to it',
+        imgURL: 'http://www.asset1.net/tv/pictures/160/237/movie/the-void-2016/The-Void-KA-1.jpg'
     },
     {
         id: 3,
         title: 'Forrest Gump',
-        desc: 'One of the best movies ever filmed'
+        desc: 'One of the best movies ever filmed',
+        imgURL: 'https://images-na.ssl-images-amazon.com/images/I/61sDuFUszfL._SY445_.jpg'
     },
     {
         id: 4,
         title: 'Lord of the Rings',
-        desc: 'Movie adaption of Tolkien\'s book series'
+        desc: 'Movie adaption of Tolkien\'s book series',
+        imgURL: 'http://ecsmedia.pl/c/wladca-pierscieni-dwie-wieze-wydanie-dwuplytowe-w-iext39346721.jpg'
     }
 
 ];
@@ -28,7 +31,7 @@ var moviesElements = movies.map(function(movie) {
     return React.createElement('li', {key: movie.id},
         React.createElement('h2', {}, movie.title),
         React.createElement('p', {}, movie.desc),
-        React.createElement('img',{}, movie.imgURL)        
+        React.createElement('img',{src: movie.imgURL})        
     );
 });
 
